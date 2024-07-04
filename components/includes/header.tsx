@@ -33,7 +33,7 @@ const navigation = [
 
 export default function Header() {
   return (
-    <header className="relative">
+    <header className="fixed top-0 left-0 z-50 w-full bg-white">
       <nav
         className="mx-auto flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"

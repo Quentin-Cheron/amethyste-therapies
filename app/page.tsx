@@ -6,7 +6,10 @@ import { Separator } from "@/components/ui/separator";
 export default function Home() {
   return (
     <>
-      <div className="hidden sm:block bg-im sm:py-32 bg-header-banner bg-no-repeat bg-cover">
+      <div
+        data-aos="fade-up"
+        className="hidden sm:block bg-im sm:py-32 bg-header-banner bg-no-repeat bg-cover"
+      >
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="font-bold tracking-tight text-white sm:text-5xl">
@@ -19,7 +22,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-white py-24 sm:py-32">
+      <div data-aos="fade-up" className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
             <p className="text-base font-semibold leading-7 text-primary">
@@ -28,29 +31,31 @@ export default function Home() {
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Ma mission au Cabinet de Thérapies
             </h2>
-            <div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
-              <div>
+            <div className="mt-10 grid max-w-xl grid-cols-2 gap-8 text-base leading-7 text-gray-700 lg:max-w-none">
+              <div data-aos="fade-right">
                 <CardHeader
                   title="Pourquoi consulter le Cabinet de Thérapies ?"
                   description="Pour se relaxer, surmonter des troubles anxieux, alimentaires, sexuels, et des dépendances, ainsi qu'améliorer le sommeil, l'humeur et soulager les douleurs psychosomatiques, il est essentiel de mieux se connaître, s'accepter et mieux communiquer pour vivre pleinement, heureux et en accord avec soi-même."
                 />
+              </div>
+              <div data-aos="fade-left">
                 <CardHeader
                   title="Pour qui ?"
                   description="Pour toute personne, quel que soit son âge, les thérapies brèves offrent une aide rapide et efficace sans risque de rechute ni effets secondaires, en utilisant des méthodologies sûres et scientifiquement reconnues pour surmonter diverses difficultés physiques, émotionnelles et psychiques."
                 />
               </div>
-              <div className="mt-16">
-                <CardHeader
-                  title="Ma mission au Cabinet de Thérapies"
-                  description="Je vous accompagne, avec une écoute bienveillante et sans jugement, en utilisant des méthodologies humanistes, cognitives et comportementales pour traiter les troubles anxieux, de l'humeur et les psycho-traumatismes, en respectant votre rythme et vos souhaits, avec des rendez-vous en présentiel (parking gratuit) ou en visio/téléconsultation."
-                />
-              </div>
+            </div>
+            <div className="mt-16 mx-auto max-w-4xl" data-aos="fade-up">
+              <CardHeader
+                title="Ma mission au Cabinet de Thérapies"
+                description="Je vous accompagne, avec une écoute bienveillante et sans jugement, en utilisant des méthodologies humanistes, cognitives et comportementales pour traiter les troubles anxieux, de l'humeur et les psycho-traumatismes, en respectant votre rythme et vos souhaits, avec des rendez-vous en présentiel (parking gratuit) ou en visio/téléconsultation."
+              />
             </div>
           </div>
         </div>
       </div>
       <Separator />
-      <div className="bg-white py-24 sm:py-32">
+      <div data-aos="fade-up" className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">
@@ -103,7 +108,7 @@ export default function Home() {
         </div>
       </div>
       <Separator className="mb-24" />
-      <div className="bg-white">
+      <div data-aos="fade-up" className="bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-8">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

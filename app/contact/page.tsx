@@ -11,10 +11,13 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div className="relative isolate bg-white">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+      <div className="grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+        <div
+          data-aos="fade-right"
+          className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48"
+        >
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
+            <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10">
               <svg
                 aria-hidden="true"
                 className="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -96,6 +99,7 @@ export default function Contact() {
           </div>
         </div>
         <form
+          data-aos="fade-left"
           action="#"
           method="POST"
           className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
@@ -201,13 +205,16 @@ export default function Contact() {
       </div>
       <Separator />
       <div className="bg-white mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-        <div className="flex justify-center space-x-6 md:order-2">
-          <Button size="lg">Médoucine</Button>
-        </div>
-        <div className="mt-8 md:order-1 md:mt-0">
-          <p className="text-center text-sm leading-5 text-gray-500">
+        <div data-aos="fade-right" className="md:order-1 md:mt-0">
+          <p className="text-center text-sm leading-5 text-gray-500 mb-3 sm:mb-0">
             Où rejoignez moi sur
           </p>
+        </div>
+        <div
+          data-aos="fade-left"
+          className="flex justify-center space-x-6 md:order-2"
+        >
+          <Button size="lg">Médoucine</Button>
         </div>
       </div>
     </div>

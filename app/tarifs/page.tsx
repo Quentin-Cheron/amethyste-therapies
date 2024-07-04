@@ -37,18 +37,7 @@ const people = [
     email: "lindsay.walton@example.com",
     role: "Member",
   },
-  {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-  },
-  {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-  },
+  // Ajoutez les autres personnes ici
 ];
 
 export const metadata: Metadata = {
@@ -112,8 +101,12 @@ export default function Tarifs() {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200 bg-white">
-            {people.map((person) => (
-              <tr key={person.email}>
+            {people.map((person, index) => (
+              <tr
+                key={person.email}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <td className="w-full max-w-0 py-8 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-0">
                   {person.name}
                   <dl className="font-normal lg:hidden">

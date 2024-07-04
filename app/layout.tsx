@@ -22,6 +22,7 @@ import "./globals.css";
 
 import Header from "@/components/includes/header";
 import Footer from "@/components/includes/footer";
+import AnimatedLayout from "@/components/animated-layout";
 
 export default function RootLayout({
   children,
@@ -32,7 +33,9 @@ export default function RootLayout({
     <html lang="fr">
       <body className={inter.className}>
         <Header />
-        <main>{children}</main>
+        <main className="mt-20">
+          <AnimatedLayout>{children}</AnimatedLayout>
+        </main>
         <Footer />
       </body>
     </html>

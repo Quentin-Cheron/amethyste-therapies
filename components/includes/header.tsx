@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import Image from "next/image";
 import { Separator } from "../ui/separator";
 import { MenuIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -39,10 +40,12 @@ export default function Header() {
       >
         <Link href="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Company</span>
-          <img
+          <Image
             className="h-8 w-auto"
             src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
+            alt="Your Company Logo"
+            width={32}
+            height={32}
           />
         </Link>
         <div className="flex lg:hidden">
@@ -84,17 +87,15 @@ export default function Header() {
           </SheetHeader>
           <ul className="flex flex-col gap-4">
             {navigation.map((item) => (
-              <>
-                <li key={item.name}>
-                  <Link
-                    className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary transition-colors"
-                    href={item.href}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
+              <li key={item.name}>
+                <Link
+                  className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary transition-colors"
+                  href={item.href}
+                >
+                  {item.name}
+                </Link>
                 <Separator />
-              </>
+              </li>
             ))}
           </ul>
         </SheetContent>

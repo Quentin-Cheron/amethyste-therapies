@@ -1,18 +1,10 @@
 "use client";
 
-import { useState } from "react";
-
 // SHADCN COMPONENTS
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -20,6 +12,7 @@ import {
 import Link from "next/link";
 import { Separator } from "../ui/separator";
 import { MenuIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 // NAVIGATION
 
@@ -29,8 +22,12 @@ const navigation = [
   { name: "Contact", href: "/contact" },
   { name: "Tarifs", href: "/tarifs" },
   { name: "Services", href: "/services" },
-  { name: "Avis", href: "/avis" },
-  { name: "Rendez-vous", href: "/rendez-vous" },
+  { name: "Avis", href: "/reviews" },
+  {
+    name: "Rendez-vous",
+    href: "https://www.medoucine.com/consultation/montelimar/stephanie-cheron/4031?utm_source=bouton-rdv&utm_medium=pack-com&utm_campaign=stephanie-cheron",
+    blank: true,
+  },
 ];
 
 export default function Header() {
@@ -56,15 +53,21 @@ export default function Header() {
             <span className="sr-only">Open main menu</span>
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-12 items-center">
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary transition-colors"
+              target={item.blank ? "_blank" : "_self"}
+              className={cn(
+                "text-sm font-semibold leading-6 text-gray-900 transition-colors",
+                item.name === "Rendez-vous"
+                  ? "bg-primary text-white py-2 px-3 rounded-md  hover:text-white/60"
+                  : " hover:text-primary"
+              )}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>

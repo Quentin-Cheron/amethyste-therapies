@@ -93,7 +93,7 @@ const navigationIcons = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 mt-40">
+    <footer className="bg-gray-100">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

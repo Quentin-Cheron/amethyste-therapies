@@ -1,7 +1,9 @@
 import { services } from "@/data/services";
+import Image from "next/image"; // Import the Image component from next/image
 
 // SHADCN COMPONENTS
 
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -25,15 +27,17 @@ export default function CardService() {
               key={post.id}
               className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 group"
             >
-              <img
+              <Image
                 src={post.imageUrl}
                 alt=""
-                className="absolute inset-0 -z-10 h-full w-full object-cover"
+                layout="fill"
+                objectFit="cover"
+                className="absolute inset-0 -z-10 h-full w-full"
               />
               <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
               <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
-              <div className="absolute inset-0 bg-black bg-opacity-50 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0 flex items-center justify-center p-4">
+              <div className="absolute inset-0 bg-black bg-opacity-50 transform translate-y-full transition-transform duration-700 group-hover:translate-y-0 flex items-center justify-center p-4">
                 <span className="text-white text-sm line-clamp-3">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
                   nihil officiis, voluptatum adipisci asperiores veniam, cum
